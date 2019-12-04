@@ -1,0 +1,17 @@
+io1:
+	- This sprite is for all activities under level 1
+io2:
+	- This sprite contains all activities for level 2
+	- Walk is 5 fps recommended
+	- Jump is 18 fps recommended
+io3:
+	- This sprite contains all activities for level 3 onwards
+	- Walk is 5 fps recommended
+	- Jump is 18 fps recommended
+io_spawn:
+	- Use this sprite everytime io respawns or spawns, make sure it is aligned with the next io sprite (applies to any kind of io sprite)
+	- 18 fps recommended
+
+io_death:
+	- Use this sprite when io dies (applies to any kind of io)
+	- 18 fps recommended
