@@ -11,16 +11,19 @@ public class Movement : MonoBehaviour
     public bool secondJump = false;
     // Start is called before the first frame update
     public bool dead = false;
+    public Animator animator;
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (dead == true){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            animator.SetBool("isDead", true);
+            //resetCurrentLevel();
         }
         Jump();
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f );
@@ -39,5 +42,10 @@ public class Movement : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             secondJump = false;
         }  
+    }
+
+    void resetCurrentLevel()
+    {
+        SceneManager.LoadScene("Level 1");
     }
 }

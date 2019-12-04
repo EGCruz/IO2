@@ -20,7 +20,7 @@ public class DeathDetector : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.collider.tag == "Enemy"){
-            SceneManager.LoadScene("Level_1");
+            //SceneManager.LoadScene("Level 1");
             IO.GetComponent<Movement>().dead = true;
         }
     }
